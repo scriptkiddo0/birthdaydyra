@@ -40,6 +40,9 @@ body {
 .three {
   font-size: 3rem;
 }
+.three-two {
+  font-size: 3rem;
+}
 
 .four .text-box {
   border: 3px solid #aaa;
@@ -223,6 +226,45 @@ body {
 #replay {
   cursor: pointer;
   z-index: 3;
+}
+
+.heart {
+  width: 180px;
+  height: 100px;
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  /* background: #264653; */
+  transform-origin: right bottom;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.heart::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: #264653; */
+  transition: 2s;
+  transform-origin: right bottom;
+}
+
+.heart:hover {
+  transform: rotate(45deg);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background: #ffafcc;
+  box-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 15px #39c6d6;
+
+}
+
+.heart:hover::before {
+  transform: rotate(-270deg) translateY(100px);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background: #ffafcc;
+  box-shadow: 0 0 50px #39c6d6, 0 0 15px #39c6d6;
 }
 
 /* Media Queries */
